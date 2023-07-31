@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: #CC0099;
+            margin: 0;
+            padding: 0;
+        }
+
+        #signup-form {
+            max-width: 400px;
+            margin: 30px auto;
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #FFFFFF;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        #submit-btn,
+        #cancel-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #submit-btn {
+            background-color: #4CAF50;
+        }
+
+        #cancel-btn {
+            background-color: #f44336;
+        }
+
+        #submit-btn:hover,
+        #cancel-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date-of-birth">Date of Birth:</label>
+            <input type="date" id="date-of-birth" name="date-of-birth" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="terms-of-use" name="terms-of-use" required>
+            <label for="terms-of-use">I agree to the terms of use</label>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" id="submit-btn" value="Submit">
+            <input type="button" id="cancel-btn" value="Cancel" onclick="window.location.href='index.html'">
+        </div>
+    </form>
+</body>
+
+</html>

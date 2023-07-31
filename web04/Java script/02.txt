@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>JavaScript Questionnaire</title>
+</head>
+<body>
+  <h1>JavaScript Questionnaire</h1>
+  <div id="question"></div>
+  <button onclick="displayQuestion(1)">Question 1</button>
+  <button onclick="displayQuestion(2)">Question 2</button>
+  <button onclick="changeColor('red')">Red</button>
+  <button onclick="changeColor('green')">Green</button>
+  <button onclick="changeColor('blue')">Blue</button>
+  <button onclick="displayQuestion(4)">Question 4</button>
+  <button onclick="displayQuestion(5)">Question 5</button>
+  <button onclick="displayQuestion(6)">Question 6</button>
+  <button onclick="displayQuestion(7)">Question 7</button>
+  <button onclick="displayQuestion(8)">Question 8</button>
+
+  <script>
+    const questions = [
+      "What is the capital of France?",
+      "What color do you like the most?",
+      "What is the square root of 25?",
+      "What is the largest planet in our solar system?",
+      "What is the powerhouse of the cell?",
+      "What is the chemical symbol for water?",
+      "What is the capital of Japan?",
+      "What is the sum of 2 + 2?",
+    ];
+
+    let currentIndex = 0;
+
+    function displayQuestion(questionNumber) {
+      if (questionNumber >= 1 && questionNumber <= questions.length) {
+        currentIndex = questionNumber - 1;
+        showCurrentQuestion();
+      }
+    }
+
+    function showCurrentQuestion() {
+      const currentQuestion = questions[currentIndex];
+      document.getElementById('question').innerHTML = "Question " + (currentIndex + 1) + ": " + currentQuestion;
+    }
+
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+
+    // Show the first question when the page loads
+    showCurrentQuestion();
+  </script>
+</body>
+</html>
+
+
+

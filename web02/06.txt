@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Redirect to Google</title>
+</head>
+<body>
+  <h1>Redirect to Google</h1>
+  <button onclick="redirectToGoogle()">Google</button>
+
+  <script>
+    function redirectToGoogle() {
+      // Display a confirm box
+      const result = confirm("Do you want to visit Google?");
+
+      // Check the user's choice
+      if (result) {
+        // If 'OK' is selected, redirect to Google
+        window.location.href = "https://www.google.com";
+      } else {
+        // If 'Cancel' is selected, display a message
+        alert("You decided to stay.");
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+

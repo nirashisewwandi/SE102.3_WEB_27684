@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Year of Birth from NIC</title>
+</head>
+<body>
+  <h1>Year of Birth from NIC</h1>
+  <script>
+    function getYearOfBirthFromNIC() {
+      // Prompt the user to enter the NIC number
+      const nicNumber = prompt("Enter the NIC number:");
+
+      // Check if the input is valid (not empty and contains the year character 'Y')
+      if (!nicNumber || nicNumber.indexOf('Y') === -1) {
+        alert("Invalid input. Please enter a valid NIC number containing the character 'Y'.");
+        return;
+      }
+
+      // Find the position of the 'Y' character in the NIC number
+      const indexOfY = nicNumber.indexOf('Y');
+
+      // Extract the year of birth from the NIC number using substring
+      const yearOfBirth = nicNumber.substring(indexOfY + 1);
+
+      // Display the year of birth
+      alert(`Year of Birth: ${yearOfBirth}`);
+    }
+
+    // Call the function when the page loads
+    getYearOfBirthFromNIC();
+  </script>
+</body>
+</html>
